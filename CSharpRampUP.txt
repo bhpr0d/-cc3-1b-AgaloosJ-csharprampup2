@@ -1,0 +1,127 @@
+using System;
+using System.Collections.Generic;
+using System.IO.Compression;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        double weightkg;
+        double Distance;
+        double Celcius;
+        var students = new int[10];
+        double average = 0;
+        Console.WriteLine("Enter your weight(lbs)");
+        double weight = Convert.ToDouble(Console.ReadLine());
+        weightkg = weight / 2.205;
+        Console.WriteLine("Enter The distance(miles)");
+        double miles = Convert.ToDouble(Console.ReadLine());
+        Distance = miles * 1.609;
+        Console.WriteLine("Enter the temperature(Fahrenheit)");
+        double fah = Convert.ToDouble(Console.ReadLine());
+        temp = (fah - 32) * 0.555;
+        Console.WriteLine("Enter the age of 10 students");
+        for (int i = 0; i < 10; i++)
+        {
+            int input = Convert.ToInt32(Console.ReadLine());
+            students[i] = input;
+        }
+        foreach (int a in students)
+        {
+            average = average + a;
+        }
+        average = average / 10;
+        Console.WriteLine($"Weight in kg: {weightkg} kg");
+        Console.WriteLine($"Distance in Distance: {Distance} km");
+        Console.WriteLine($"Temperature in Celsius: {Celcius}");
+        Console.WriteLine("Ages of 10 students:");
+        foreach (int a in students)
+        {
+            Console.WriteLine(a);
+        }
+
+        Console.WriteLine($"Average age of students: {average}");
+        MYstory();
+
+        //PART2
+        int n;
+        Console.WriteLine("Enter a number");
+        n = Int32.Parse(Console.ReadLine());
+        for (int pira1 = 0; pira1 <= n; pira1++)
+        {
+            for (int x2 = 0; xx <= pira1; x2++)
+            {
+                Console.Write(x2);
+            }
+            Console.Write("\n");
+        }
+        Console.WriteLine("Enter a number");
+        int add;
+        int output = 0;
+        add = Int32.Parse(Console.ReadLine());
+        for (int ax = 0; ax <= add; ax++)
+        {
+            Console.Write(ax);
+            output += ax;
+            if (ax != add)
+            {
+                Console.Write("+");
+            }
+        }
+        if (output <= 0 || output == null)
+        {
+            Console.WriteLine("Invalid Input");
+        }
+        else
+        {
+            Console.Write("\n");
+            Console.Write("Output:");
+            Console.Write(output);
+        }
+        Console.Write("\n");
+        Console.WriteLine("Enter a number");
+        int pyra;
+        pyra = Int32.Parse(Console.ReadLine());
+        for (int c = pyra; c >= 0; c--)
+        {
+            for (int h = 0; h <= c; h++)
+            {
+                Console.Write(h);
+
+            }
+            Console.Write("\n");
+        }
+    }
+    public static void MYstory()
+    {
+        string[] names = new string[5];
+        string[] ability = new string[5];
+        string[] equipment = new string[5];
+        for (int nfl = 0; nfl < names.Length; nfl ++)
+        {
+            Console.WriteLine("Enter the names of 5 people");
+            names[name] = Console.ReadLine();
+        }
+        for (int afl = 0; afl < ability.Length; afl ++)
+        {
+            Console.WriteLine("Enter 5 Abilities.");
+            ability[ab] = Console.ReadLine();
+        }
+        for (int efl = 0; efl < equipment.Length; efl++)
+        {
+            Console.WriteLine("Enter 5 Equipments");
+            equipment[equ] = Console.ReadLine();
+        }
+        Console.WriteLine($"In a land of utter chaos, where the world was overrun by evil monsters and chaos reigned, the remnants of humanity found refuge in a desolate and broken city. The only source of hope and survival were the gasoline-powered cars that had become both their shelter and their means of escape.");
+
+        Console.WriteLine($"Amidst the ruins, there was a fearless leader known as Captain {names[0]}, who commanded a convoy of resilient survivors. His trusted mechanic, {names[1]}, ensured that the fleet of gasoline cars was always in top condition, ready to withstand the relentless attacks of the monstrous creatures that lurked in the shadows.");
+
+        Console.WriteLine($"One day, a rebellion sparked within the survivors. {names[2]}, a fellow survivor and skilled engineer, sought to take control of the precious gasoline resources, leaving the convoy vulnerable to the monsters. The struggle for power escalated, and the once united survivors faced internal strife.");
+
+        Console.WriteLine($"It was then revealed that {names[3]} had been secretly collaborating with the monsters, using his cunning {ability[0]} and {ability[1]} to weaken the survivors from within. Alas, Captain {names[0]} had other plans. He reached out to {names[4]}, a wise wanderer rumored to possess ancient knowledge.");
+
+        Console.WriteLine($"With the wise one's {ability[2]} and {ability[3]}, they devised a plan to fortify the convoy and enhance the cars with a dwarf's magical {ability[4]}. The thundering roar of the engines, combined with {equipment[0]} and {equipment[1]}, and equipped with the righteous {equipment[2]} and {equipment[3]}, turned the gasoline cars into formidable weapons against the monsters.");
+
+        Console.WriteLine($"As the rebellion and the monster attacks intensified, Captain {names[0]} led a daring escape, navigating the perilous streets with the roaring engines of the gasoline cars echoing through the desolate city. The fate of humanity hung in the balance, and it was up to Captain {names[0]} and his convoy to survive the night and continue the fight for a glimmer of hope in the dystopian world.");
+    }
+}
